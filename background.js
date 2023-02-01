@@ -10,12 +10,14 @@ chrome.runtime.onMessage.addListener(function(request, sender, response) {
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(list),
         })
-        .then(response => response.json())
+        .then(response => response.text())
         .then(data => {
-          console.log(data);
-          response({data: data, index: request.index});
+          let dataObj = JSON.parse(data);
+          console.log(dataObj);
+          response({data: dataObj, index: request.index});
         })
-        .catch(error => console.log("error", error))  
+        .catch(error => console.log("error", error))
+        return true;  // Will respond asynchronously.  
       }
 });
 

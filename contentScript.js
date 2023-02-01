@@ -23,8 +23,8 @@
         filename = filename.concat('.jpg');
           chrome.runtime.sendMessage({msg: 'image', index: i, filename:filename, url:images[i].src}, function({data,index}){
             // Add image size checker condition
-            console.log(data);
-              if(data === "nude"){
+            console.log(data.predictions[0].class);
+              if(data.predictions[0].class === "nude"){
                 console.log("is nude");
                 images[index].src = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg"
               }
