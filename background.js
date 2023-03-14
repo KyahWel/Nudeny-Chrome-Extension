@@ -19,6 +19,6 @@ chrome.runtime.onMessage.addListener(function(request, sender, response) {
         .catch(error => console.log("error", error))
         return true;  // Will respond asynchronously.  
       }
-});
+}); 
 
 

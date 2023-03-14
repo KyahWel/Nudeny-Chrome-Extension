@@ -18,11 +18,11 @@
     for (var i = 0; i < images.length; i++) {
       if (processedImages.indexOf(images[i]) === -1) {
         let url =  images[i].src;
-        let firstString = url.split(':'); // to be followed, check if the image link is using base64 encoding
+        let firstString = url.split(':'); // Backlog: check if the image link is using base64 encoding
         let filename = createFilename(10);
         filename = filename.concat('.jpg');
           chrome.runtime.sendMessage({msg: 'image', index: i, filename:filename, url:images[i].src}, function({data,index}){
-            // Add image size checker condition
+            // Backlog: Add image size checker condition
             console.log(data.predictions[0].class);
               if(data.predictions[0].class === "nude"){
                 console.log("is nude");
@@ -30,8 +30,6 @@
               }
           });
           processedImages.push(images[i]);
-        
-        
       }
     }
     setTimeout(getNewImages, 1000);
