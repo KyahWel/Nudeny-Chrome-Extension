@@ -3,6 +3,7 @@
     "name" : "Nudeny",
     "description" : "Nudity image detection and classification",
     "version" : "1.0",
+    "permissions": ["tabs"],
     "host_permissions": [
                     "http://127.0.0.1:8000/*"],
     "action":{
