@@ -3,14 +3,131 @@
     height: 400px;
 }
 
-body {
-    height: 100%
+  *
+  {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+  }
+  
+  body
+  {
+      background-color: antiquewhite;
+      font-family: sans-serif;
+      height: 100%
+  }
+  
+  .menu-bar
+  {
+      float: right;
+  }
+  
+  .menu-bar ul
+  {
+      display: inline-flex;
+      list-style: none;
+  }
+  
+  
+  .settings-icon {
+      cursor: pointer;
+      font-size: 30px;
+      position: absolute;
+      top: 10px;
+      right: 50px;
+    }
+  
+  .settings-icon:hover
+  {
+      transform: scale(1.2);
+  }
+  
+  .list-container {
+      display: none;
+      position: absolute;
+      top: 20px;
+      right: 65px;
+      background-color: #c8b6a6;
+      border: 1px solid #ccc;
+      padding: 20px;
+      z-index: 1;
+    }
+    
+    .close-btn {
+      position: absolute;
+      top: -150px;
+      right: -110px;
+      border: none;
+      background: transparent;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .info-icon {
+      cursor: pointer;
+      font-size: 30px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+  }
+  
+  .info-icon:hover
+  {
+      transform: scale(1.1);
+  }
+  
+  .info-container {
+      display: none;
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      width: 225px;
+      background-color: #c8b6a6;
+      border: 1px solid #ccc;
+      padding: 20px;
+      z-index: 1;
+      font-size: 13px;
+  }
+  
+  .info-container .infoclose-btn {
+      position: absolute;
+      top: -150px;
+      right: -110px;
+      border: none;
+      background: transparent;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+  }
+  
+  .info-container .info-title {
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 1px;
+  }
+  
+  .info-container .info-paragraph {
+    text-indent: 20px;
+    text-align: justify;
   }
 
-.btn{
-    font-size: 100px !important;
-}
-
-#main{
-    color: red;
-}
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 100px;
+    margin: 150px;
+    margin-right: 120px;
+  }
+  
+  button:hover {
+    transform: scale(1.2);
+  }
+  
